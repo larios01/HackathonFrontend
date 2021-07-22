@@ -16,7 +16,7 @@ import { ViewCharacterComponent } from './view-character/view-character.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
