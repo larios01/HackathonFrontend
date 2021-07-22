@@ -6,7 +6,7 @@ specific charater details
 -can edit any description
 -can view all descriptions
 
-
+add charater
 
 Gender
 hair color
