@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-view-character',
-  templateUrl: './view-character.component.html',
-  styleUrls: ['./view-character.component.css']
+  selector: 'app-create-character',
+  templateUrl: './create-character.component.html',
+  styleUrls: ['./create-character.component.css']
 })
-export class ViewCharacterComponent implements OnInit {
+export class CreateCharacterComponent implements OnInit {
 
   constructor() { }
 
