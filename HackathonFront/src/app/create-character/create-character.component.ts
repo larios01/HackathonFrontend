@@ -18,6 +18,11 @@ export class CreateCharacterComponent implements OnInit {
 
   onSubmit(){
 
+    (<HTMLInputElement>document.getElementById("gender")).value;
+    (<HTMLInputElement>document.getElementById("hairColor")).value;
+    (<HTMLInputElement>document.getElementById("eyes")).value;
+    (<HTMLInputElement>document.getElementById("race")).value;
+
 
   }
   Save(){
