@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Description } from '../models/description';
+//import { Description } from '../models/description';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,8 @@ private urlUpdate: string;
     this.urlUpdate="http://localhost:9000/character/description" //might have to change
   }
 
-  updateDecription(description:Description):Observable<any>{
+  updateDecription(description:string):Observable<any>{
 
-    return this.http.put<Description>(this.urlUpdate,description);
+    return this.http.put<string>(this.urlUpdate,description);
   }
 }

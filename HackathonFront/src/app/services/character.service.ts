@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { CharModel } from './char-model';
+import { Character } from '../models/character';
 
 
 @Injectable({
@@ -15,8 +15,8 @@ export class CharacterService {
     private http: HttpClient,
     ) {}
 
-      createCharacter(char: CharModel): Observable<CharModel>{
-        return this.http.post<CharModel>(this.postURl, char); 
+      createCharacter(char: Character): Observable<Character>{
+        return this.http.post<Character>(this.postURl, char); 
       }
 
 }
