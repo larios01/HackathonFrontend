@@ -7,8 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewCharacterComponent implements OnInit {
 
+  public characterName?:string;
+
+  public gender?:string;
+  public hairColor?: string;
+  public strength?:string;
+  public intelligence?:string;
+  public wisdom?: string;
+  public dexterity?:string;
+  public numToes?:string;
+  public eyeColor?:string;
+  public race?:string;
+  public luck?: string;
+
+  public description?:string;
+
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 
