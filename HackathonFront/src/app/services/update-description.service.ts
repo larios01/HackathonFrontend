@@ -10,11 +10,11 @@ export class UpdateDescriptionService {
 private urlUpdate: string;
 
   constructor(private http:HttpClient) { 
-    this.urlUpdate="http://localhost:9000/character/description" //might have to change
+    this.urlUpdate="http://localhost:8080/character/" //might have to change
   }
 
   updateDecription(description:string):Observable<any>{
 
-    return this.http.put<string>(this.urlUpdate,description);
+    return this.http.put<string>(this.urlUpdate+"id"+"description",description);
   }
 }

@@ -33,7 +33,8 @@ export class CreateCharacterComponent implements OnInit {
     console.log(Number((<HTMLInputElement>document.getElementById("luck")).value));
     console.log(Number((<HTMLInputElement>document.getElementById("toeNum")).value));
     // this.characterService.createCharacter(this.character).subscribe(res => {
-      console.log(this.character);
+     console.log(this.character);
     // });
+
   }
 }
