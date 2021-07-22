@@ -6,15 +6,17 @@ specific charater details
 -can edit any description
 -can view all descriptions
 
-add charater
+add charater 
+-it is the specific character but hide the cancel button
 
-Gender
-hair color
-strangth
-intelegents
-wisdom 
-dexanrity
-number of toes
-eye color
-race
-luck 
+for now limit to selected attributes
+Gender 3
+hair color 4 colors
+strangth 1-10
+intelegents 1-10
+wisdom 1-10
+dexanrity 1-10
+number of toes <30
+eye color 4 eye colors
+race 4
+luck 1-10
