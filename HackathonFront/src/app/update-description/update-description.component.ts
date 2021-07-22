@@ -8,7 +8,7 @@ import { UpdateDescriptionService } from '../services/update-description.service
   styleUrls: ['./update-description.component.css']
 })
 export class UpdateDescriptionComponent implements OnInit {
-  private description: Description;
+   description: Description;
 
   constructor(private service:UpdateDescriptionService) { 
     this.description= new Description();
