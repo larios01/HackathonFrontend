@@ -1,0 +1,20 @@
+charater dashboard 
+-add char button
+-click on name 
+
+specific charater details
+-can edit any description
+-can view all descriptions
+
+
+
+Gender
+hair color
+strangth
+intelegents
+wisdom 
+dexanrity
+number of toes
+eye color
+race
+luck 
