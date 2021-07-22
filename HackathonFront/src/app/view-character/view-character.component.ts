@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { CharacterService } from '../services/character.service';
 
 @Component({
   selector: 'app-view-character',
@@ -24,7 +25,7 @@ export class ViewCharacterComponent implements OnInit {
 
   public description?: string;
 
-  constructor(private location: Location, private router: ActivatedRoute) { }
+  constructor(private location: Location, private router: ActivatedRoute, private characterService:CharacterService) { }
 
 
   ngOnInit(): void {
