@@ -10,14 +10,20 @@ import { passChar } from '../models/passChar';
 })
 export class CharacterService {
 
-  private postURl = 'character';
+  private url = 'localhost:8080/api/character';
 
-  constructor(
-    private http: HttpClient,
-    ) {}
+  constructor(private http: HttpClient) {}
 
-      createCharacter(char: passChar): Observable<Character>{
-        return this.http.post<Character>(this.postURl, char); 
+
+      createCharacter(char: Character): Observable<Character>{
+        return this.http.post<Character>(this.url, char); 
+
       }
 
+      getCharacter(id:number):Observable<Character>{
+        return this.http.get<Character>(this.url+"/"+id);
+      }
+      getAllCharacters(){
+        return this.http.get<Character>(this.url); 
+      }      
 }
