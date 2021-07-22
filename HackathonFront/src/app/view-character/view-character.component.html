@@ -1,0 +1,30 @@
+<div class = "character-header">
+    <span style = "displaY:inline-block; border: 1px solid black; width:100px; height:100px;">
+    <span style= "font-size:80px;">&#x40;</span></span>
+    <span class= "character-name">{{characterName}}</span>
+</div>
+<div class = "attributes">
+    <button> Edit</button>
+    <ul>
+        <li>Gender:{{gender}}</li>
+        <li>Hair Color:{{hairColor}}</li>
+        <li>Strength:{{strength}}</li>
+        <li>Intelligence:{{intelligence}}</li>
+        <li>Wisdom:{{wisdom}}</li>
+        <li>Dexterity:{{dexterity}}</li>
+        <li>Number of Toes:{{numToes}}</li>
+        <li>Eye Color:{{eyeColor}}</li>
+        <li>Race:{{race}}</li>
+        <li>Luck:{{luck}}</li>
+
+    </ul>
+    
+    
+</div>
+
+<div class =  "description">
+    <h3>Description:</h3> <button> Edit</button>
+    <p>{{description}}</p>
+    
+</div>
+<button (click)='goBack()'>back</button>
