@@ -1,7 +1,5 @@
-import { NumberValueAccessor } from "@angular/forms";
-
 export interface CharModel {
-    id: number;
+    id?: number;
     gender: string;
     hairColor: string;
     eyeColor: string;
