@@ -35,6 +35,9 @@ export class ViewCharacterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Save(){
+    
+  }
 }
 
 
