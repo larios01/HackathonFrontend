@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormsModule, Validators } from '@angular/forms';
+import { CharModel } from '../char-model';
 
 @Component({
   selector: 'app-create-character',
@@ -9,32 +11,15 @@ export class CreateCharacterComponent implements OnInit {
 
   constructor() { }
 
-  gender:string='';
-  female:string="Female";
-  male:string="Male";
-  other:string="Other"
+  character?: CharModel;
 
-  hairColor:string='';
-  blonde:string="Blonde";
-  brunette:string="Brunette";
-  redHair:string="Red";
-  brownHair:string="Brown"
-
-  eyeColor:string='';
-  blueEyes: string="Blue";
-  brownEyes: string="Brown";
-  greenEyes: string="Green";
-  redEyes: string="Red";
-
-  race:string='';
-  human:string="Human";
-  dwarf:string="Dwarf";
-  elf:string="Elf";
-  unicorn:string="Unicorn"
-  
   ngOnInit(): void {
   }
 
+  onSubmit(){
+
+
+  }
   Save(){
     
   }

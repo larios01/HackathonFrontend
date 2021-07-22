@@ -14,7 +14,7 @@ import { ListCharacterComponent } from './list-character/list-character.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
