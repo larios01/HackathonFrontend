@@ -20,7 +20,7 @@ export class CharacterService {
 
       }
 
-      getCharacter(id:number):Observable<any>{
+      getCharacter(id:number):Observable<Character>{
      /*   let char:Character = { id: 1,
           name:"random name",
           gender: "M",
@@ -38,7 +38,7 @@ export class CharacterService {
         }
         return of(char);*/
         
-         return this.http.get(this.url+"/"+1);
+         return this.http.get<Character>(this.url+"/"+id);
       }
       getAllCharacters(): Observable<Character[]>{
         let char:Character[] = [{ id: 1,
