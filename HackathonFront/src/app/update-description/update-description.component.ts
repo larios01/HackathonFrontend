@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 //import { Description } from '../models/description';
 import { UpdateDescriptionService } from '../services/update-description.service';
 
@@ -8,8 +8,9 @@ import { UpdateDescriptionService } from '../services/update-description.service
   styleUrls: ['./update-description.component.css']
 })
 export class UpdateDescriptionComponent implements OnInit {
+  @Input() characterId:number = 1;  
   // description: Description;
-  
+
   //Description in the backend is a string within character model
   description:string ='';
 
@@ -21,10 +22,12 @@ export class UpdateDescriptionComponent implements OnInit {
   }
 
   updateDescription():void{
-    //this.service.updateDecription(this.description).subscribe(res=>{
-     // this.description=new Description();
-      
-   // })
+    const myObserver= {
+      next: (response: any) => console.log(response),
+        
+      error: (error: Error) => console.log(error)
+    };
+    this.service.updateDecription(this.characterId,this.description).subscribe(myObserver);
   }
 
 }

@@ -32,7 +32,7 @@ export class CharacterService {
           dexterity: 1,
           luck: 1,
           numOfToes: 1,
-          description:"string"
+          description:"string description"
 
         }
         return of(char);
