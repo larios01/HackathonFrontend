@@ -1,1 +1,6 @@
-<p>list-character works!</p>
+<h1>List of Character</h1>
+<br><br>
+<table>
+<tr><th>Name</th><th>Description</th></tr>
+        <tr *ngFor="let char of characterList"><a routerLink="/viewCharacter/{{char.id}}"><td class="tab">{{char.name}}</td><td class="tab">{{char.description}}</td></a></tr>
+</table>

@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:'listCharacter',component:ListCharacterComponent},
   {path:'createCharacter',component:CreateCharacterComponent},
   {path:'updateDescription',component:UpdateDescriptionComponent},
-  {path:'viewCharacter',component:ViewCharacterComponent},
+  {path:'viewCharacter/:id',component:ViewCharacterComponent},
 ];
 
 @NgModule({
