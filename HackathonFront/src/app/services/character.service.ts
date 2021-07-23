@@ -11,7 +11,7 @@ import { of } from 'rxjs';
 })
 export class CharacterService {
 
-  private url = 'localhost:8080/api/character';
+  private url = 'http://localhost:8080/api/character';
 
   constructor(private http: HttpClient) {}
 
