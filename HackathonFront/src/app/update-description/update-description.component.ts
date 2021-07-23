@@ -35,6 +35,28 @@ export class UpdateDescriptionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ran1:number = 0;
+  ran2:number = 0;
+  randomArray1:string[] = [
+      "It happened one morning ",
+      "Once upon a time ",
+      "Gray, greasy hair awkwardly hangs over a fine, tense face ",
+      "Has some magical powers ",
+      "In a galaxy far, far away  "
+  ]
+  randomArray2:string[] = [
+    "a foul-smelling poison gas belched from its mouth.",
+    "its behavior prompted scientists to undertake research into it",
+    "Suspicious of other people's intuitions and Perceptive",
+    "Dislikes being alone. Popular and Able to inspire and motivate others",
+    "a wee bit sus"
+]
+  randomDescription():void{
+    this.ran1 = Math.floor(Math.random()*5);
+    this.ran2 = Math.floor(Math.random()*5);
+    this.description = this.randomArray1[this.ran1] + this.randomArray2[this.ran2];
+  }
+
   updateDescription():void{
     // const myObserver= {
     //   next: (response: any) => console.log(response),
