@@ -28,6 +28,8 @@ export class ViewCharacterComponent implements OnInit {
 
   public description?: string;
 
+  public id:number = 1;
+
   constructor(private location: Location, private router: ActivatedRoute, private characterService: CharacterService) { }
 
 
@@ -35,10 +37,11 @@ export class ViewCharacterComponent implements OnInit {
 
     //Get the id of the character from the url so that we can fetch data
     let characterIdString = this.router.snapshot.paramMap.get('id');
-    let characterId: number = 0;
+    let characterId: number = 1;
     if (characterIdString != null) {
       characterId = parseInt(characterIdString);
     }
+    this.id = characterId;
     const myObserver = {
       next: (response: Character) => {
         this.characterName = response.name;
@@ -53,12 +56,13 @@ export class ViewCharacterComponent implements OnInit {
         this.luck = response.luck;
         this.numOfToes = response.numOfToes;
         this.description = response.description;
+        
       },
       error: (error: Error) => console.log(error)
     };
 
 
-    this.characterService.getCharacter(1).subscribe(myObserver);
+    this.characterService.getCharacter(characterId).subscribe(myObserver);
   }
 
   goBack(): void {
