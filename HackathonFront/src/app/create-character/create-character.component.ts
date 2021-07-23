@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormsModule, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CharModel } from '../char-model';
 import { passChar } from '../models/passChar';
 import { CharacterService } from '../services/character.service';
@@ -11,7 +12,7 @@ import { CharacterService } from '../services/character.service';
 })
 export class CreateCharacterComponent implements OnInit {
 
-  constructor(private characterService: CharacterService) { }
+  constructor(private characterService: CharacterService, private router: Router) { }
 
   character: passChar = {name: "", gender: "", hairColor: "", eyeColor: "",
   race: "", strength: 0, intelligence: 0, wisdom: 0, dexterity: 0, luck: 0,
@@ -33,10 +34,12 @@ export class CreateCharacterComponent implements OnInit {
     this.character.dexterity=(Number((<HTMLInputElement>document.getElementById("dexterity")).value));
     this.character.luck=(Number((<HTMLInputElement>document.getElementById("luck")).value));
     this.character.numOfToes=(Number((<HTMLInputElement>document.getElementById("toeNum")).value));
-    console.log(JSON.stringify(this.character));
-    // this.characterService.createCharacter(this.character).subscribe(res => {
-     console.log(this.character);
-    // });
-
+    this.characterService.createCharacter(this.character).subscribe(res => {
+    });
+    this.router.navigate(['/listCharacter'])
   }
+  goBack(){
+    this.router.navigate(['/listCharacter'])
+  }
+  
 }
