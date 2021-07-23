@@ -54,27 +54,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
+                            <a class="nav-link" routerLink="/viewCharacter">View</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
+                            <a class="nav-link" routerLink="/updateDescription">update</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Page</a>
+                            <a class="nav-link" routerLink="/createCharacter">Create</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <app-create-character></app-create-character>
+        <router-outlet></router-outlet>
     </div>
 </div>
 
-
-<app-create-character></app-create-character>
-
-<app-view-character></app-view-character>
-<app-update-description></app-update-description>
-<router-outlet></router-outlet>
 
 

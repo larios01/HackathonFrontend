@@ -1,4 +1,5 @@
 export interface passChar {
+    name: string;
 gender: string;
 hairColor: string;
 eyeColor: string;
