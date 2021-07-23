@@ -7,7 +7,7 @@ export interface Character{
     eyeColor: string;
     race: string;
     strength: number;
-    intelligent: number;
+    intelligence: number;
     wisdom: number;
     dexterity: number;
     luck: number;
