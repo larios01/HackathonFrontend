@@ -13,7 +13,7 @@ export class CreateCharacterComponent implements OnInit {
 
   constructor(private characterService: CharacterService) { }
 
-  character: passChar = {gender: "", hairColor: "", eyeColor: "",
+  character: passChar = {name: "", gender: "", hairColor: "", eyeColor: "",
   race: "", strength: 0, intelligent: 0, wisdom: 0, dexterity: 0, luck: 0,
   numOfToes: -1};
 
@@ -22,6 +22,7 @@ export class CreateCharacterComponent implements OnInit {
   }
 
   onSubmit(){
+    this.character.name=(<HTMLInputElement>document.getElementById("name")).value; 
     this.character.gender=(<HTMLInputElement>document.getElementById("gender")).value;
     this.character.hairColor=(<HTMLInputElement>document.getElementById("hairColor")).value;
     this.character.eyeColor=(<HTMLInputElement>document.getElementById("eyes")).value;
