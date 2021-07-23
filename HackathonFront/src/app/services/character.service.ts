@@ -29,12 +29,12 @@ export class CharacterService {
           eyeColor: "green",
           race: "oblong",
           strength: 1,
-          intelligent: 1,
+          intelligence: 1,
           wisdom: 1,
           dexterity: 1,
           luck: 1,
           numOfToes: 1,
-          description:"string"
+          description:"string description"
 
         }
         return of(char);
