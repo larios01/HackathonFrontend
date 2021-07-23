@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Character } from '../models/character';
 import { passChar } from '../models/passChar';
+import { of } from 'rxjs';
 
 
 @Injectable({
@@ -21,7 +22,24 @@ export class CharacterService {
       }
 
       getCharacter(id:number):Observable<Character>{
-        return this.http.get<Character>(this.url+"/"+id);
+        let char:Character = { id: 1,
+          name:"random name",
+          gender: "M",
+          hairColor: "red",
+          eyeColor: "green",
+          race: "oblong",
+          strength: 1,
+          intelligent: 1,
+          wisdom: 1,
+          dexterity: 1,
+          luck: 1,
+          numOfToes: 1,
+          description:"string"
+
+        }
+        return of(char);
+        
+        //this.http.get<Character>(this.url+"/"+id);
       }
       getAllCharacters(){
         return this.http.get<Character>(this.url); 
