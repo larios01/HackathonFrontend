@@ -19,8 +19,8 @@ export class CharacterService {
 
       }
 
-      getCharacter(id:number):Observable<Character>{
-        let char:Character = { id: 1,
+      getCharacter(id:number):Observable<any>{
+     /*   let char:Character = { id: 1,
           name:"random name",
           gender: "M",
           hairColor: "red",
@@ -35,9 +35,9 @@ export class CharacterService {
           description:"string description"
 
         }
-        return of(char);
+        return of(char);*/
         
-        // return this.http.get<Character>(this.url+"/"+id);
+         return this.http.get(this.url+"/"+1);
       }
       getAllCharacters(): Observable<Character[]>{
         let char:Character[] = [{ id: 1,
