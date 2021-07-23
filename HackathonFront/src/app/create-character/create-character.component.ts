@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CharModel } from '../char-model';
+import { Character } from '../models/character';
 import { passChar } from '../models/passChar';
 import { CharacterService } from '../services/character.service';
 
@@ -14,7 +15,7 @@ export class CreateCharacterComponent implements OnInit {
 
   constructor(private characterService: CharacterService, private router: Router) { }
 
-  character: passChar = {name: "", gender: "", hairColor: "", eyeColor: "",
+  character: Character = {id:0, name: "", gender: "", hairColor: "", eyeColor: "",
   race: "", strength: 0, intelligence: 0, wisdom: 0, dexterity: 0, luck: 0,
   numOfToes: -1};
 
