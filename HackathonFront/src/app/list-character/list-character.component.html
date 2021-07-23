@@ -1,6 +1,12 @@
-<h1>List of Character</h1>
+<h1>List of Characters</h1>
 <br><br>
-<table>
-<tr><th>Name</th><th>Description</th></tr>
-        <tr *ngFor="let char of characterList"><a routerLink="/viewCharacter/{{char.id}}"><td class="tab">{{char.name}}</td><td class="tab">{{char.description}}</td></a></tr>
+<table class="table">
+        <thead>
+                <tr><th scope="col">Name</th><th scope="col">Description</th></tr>
+
+        </thead>
+        <tbody>
+                <tr *ngFor="let char of characterList" scope="row"><th class="tab"><a routerLink="/viewCharacter/{{char.id}}">{{char.name}}</a></th><td class="tab">{{char.description}}</td></tr>
+
+        </tbody>
 </table>
