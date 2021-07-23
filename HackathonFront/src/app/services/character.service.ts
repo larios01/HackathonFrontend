@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Character } from '../models/character';
-import { passChar } from '../models/passChar';
-import { of } from 'rxjs';
 
 
 @Injectable({
@@ -39,9 +37,25 @@ export class CharacterService {
         }
         return of(char);
         
-        //this.http.get<Character>(this.url+"/"+id);
+        // return this.http.get<Character>(this.url+"/"+id);
       }
-      getAllCharacters(){
-        return this.http.get<Character>(this.url); 
+      getAllCharacters(): Observable<Character[]>{
+        let char:Character[] = [{ id: 1,
+          name:"random name",
+          gender: "M",
+          hairColor: "red",
+          eyeColor: "green",
+          race: "oblong",
+          strength: 1,
+          intelligence: 1,
+          wisdom: 1,
+          dexterity: 1,
+          luck: 1,
+          numOfToes: 1,
+          description:"string"
+
+        }]
+        return of(char);
+        // return this.http.get<Character[]>(this.url); 
       }      
 }
