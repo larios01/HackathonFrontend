@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CharacterService } from '../services/character.service';
 import { Character } from '../models/character';
 
@@ -11,7 +10,7 @@ import { Character } from '../models/character';
 })
 export class ViewCharacterComponent implements OnInit {
 
-  public editDescription:boolean = false;
+  public editDescription: boolean = false;
 
   public characterName?: string;
 
@@ -28,9 +27,9 @@ export class ViewCharacterComponent implements OnInit {
 
   public description?: string;
 
-  public id:number = 1;
+  public id: number = 1;
 
-  constructor(private location: Location, private router: ActivatedRoute, private characterService: CharacterService) { }
+  constructor(private route: Router, private router: ActivatedRoute, private characterService: CharacterService) { }
 
 
   ngOnInit(): void {
@@ -56,7 +55,7 @@ export class ViewCharacterComponent implements OnInit {
         this.luck = response.luck;
         this.numOfToes = response.numOfToes;
         this.description = response.description;
-        
+
       },
       error: (error: Error) => console.log(error)
     };
@@ -66,9 +65,9 @@ export class ViewCharacterComponent implements OnInit {
   }
 
   goBack(): void {
-    this.location.back();
+    this.route.navigate(['listCharacter']);
   }
-  editCharacterDescription():void{
+  editCharacterDescription(): void {
     this.editDescription = true;
   }
 }
